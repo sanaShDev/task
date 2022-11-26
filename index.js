@@ -14,7 +14,7 @@ window.addEventListener('touchmove', function(e){
   mouse.x = e.touches.item("").clientX;
   mouse.y = e.touches.item("").clientY;
   
-  for(let i=0; i<5; i++)
+  for(let i=0; i<10; i++)
   array.push(new Particle);
 });
 
@@ -92,10 +92,10 @@ function handleParticles(){
 
 function animate(){
   //ctx.clearRect(0,0,canvas.width, canvas.height);
-  ctx.fillStyle = "rgba(0,0,0,0.01)";
+  ctx.fillStyle = "rgba(0,0,0,0.05)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   handleParticles()
-  hue+=10;
+  hue+=20;
   requestAnimationFrame(animate);
 }
 
