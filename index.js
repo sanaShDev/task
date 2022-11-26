@@ -14,7 +14,7 @@ window.addEventListener('touchmove', function(e){
   mouse.x = e.touches.item("").clientX;
   mouse.y = e.touches.item("").clientY;
   
-  for(let i=0; i<10; i++)
+  for(let i=0; i<7; i++)
   array.push(new Particle);
 });
 
@@ -22,7 +22,7 @@ window.addEventListener('touchstart', function(e){
   mouse.x = e.touches.item("").clientX;
   mouse.y = e.touches.item("").clientY;
   
-  for(let i=0; i<50; i++)
+  for(let i=0; i<10; i++)
   array.push(new Particle);
 
 });
@@ -33,7 +33,7 @@ class Particle{
     this.y = mouse.y;
     //this.x = Math.random()*canvas.width;
     //this.y = Math.random()*canvas.height;
-    this.size = Math.random()*15+1;
+    this.size = Math.random()*9+1;
     this.speedX = Math.random()*3-1.5;
     this.speedY = Math.random()*3-1.5;
     this.color = 'hsl('+hue+', 100%, 50%)'
@@ -100,4 +100,5 @@ function animate(){
 }
 
 //setInterval(animate, 10)
+
 animate();
