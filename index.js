@@ -27,6 +27,20 @@ window.addEventListener('touchstart', function(e){
 
 });
 
+window.addEventListener('mousemove',function(e){
+  mouse.x = e.x;
+  mouse.y = e.y;
+  for(let i=0; i<10; i++)
+  array.push(new Particle);
+});
+
+window.addEventListener('click',function(e){
+  mouse.x = e.x;
+  mouse.y = e.y;
+  for(let i=0; i<10; i++)
+  array.push(new Particle);
+});
+
 class Particle{
   constructor(){
     this.x = mouse.x;
